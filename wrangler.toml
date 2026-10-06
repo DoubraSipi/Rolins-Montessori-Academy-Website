@@ -1,0 +1,5 @@
+name = "rolins-montessori-academy-website"
+compatibility_date = "2024-09-01"
+
+[vars]
+NEXTJS_ENV = "production"
