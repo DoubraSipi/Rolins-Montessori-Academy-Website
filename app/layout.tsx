@@ -1,13 +1,36 @@
-export const metadata = { title: "Rolins Montessori Academy", description: "Nursery, Primary and Secondary in Alakahia, Port Harcourt." };
+import type { Metadata } from 'next';
+import { Fraunces, Source_Sans_3 } from 'next/font/google';
+import './globals.css';
+import { Navbar } from '@/components/Navbar';
+import { Footer } from '@/components/Footer';
+
+const display = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-display',
+  weight: ['500', '600', '700'],
+});
+
+const sans = Source_Sans_3({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Rolins Montessori Academy',
+    template: '%s | Rolins Montessori Academy',
+  },
+  description:
+    'Rolins Montessori Academy — Nursery, Primary and Secondary education in Alakahia, Port Harcourt. Montessori foundations with the Nigerian standard curriculum.',
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body style={{ fontFamily: "system-ui, sans-serif", margin: 0 }}>
-        <header style={{ padding: "12px 20px", borderBottom: "1px solid #eee" }}>
-          <strong>Rolins Montessori Academy</strong>
-        </header>
-        <main style={{ padding: 20 }}>{children}</main>
+    <html lang="en" className={`${display.variable} ${sans.variable}`}>
+      <body className="flex min-h-screen flex-col">
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );
