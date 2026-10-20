@@ -14,6 +14,24 @@
   }
 }
 
+@media print {
+  header, footer, nav {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+  }
+  .report-sheet {
+    box-shadow: none !important;
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+}
+
 @layer components {
   .container-x {
     @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
