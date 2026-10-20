@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   },
   description:
     'Rolins Montessori Academy — Nursery, Primary and Secondary education in Alakahia, Port Harcourt. Montessori foundations with the Nigerian standard curriculum.',
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

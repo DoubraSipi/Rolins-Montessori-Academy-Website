@@ -52,7 +52,7 @@ export default function Home() {
           className="absolute inset-0 opacity-25"
           style={{
             backgroundImage:
-              'radial-gradient(circle at 20% 20%, #458c62 0, transparent 45%), radial-gradient(circle at 80% 10%, #e5b84f 0, transparent 40%)',
+              'radial-gradient(circle at 20% 20%, #2f97d4 0, transparent 45%), radial-gradient(circle at 80% 10%, #dfa128 0, transparent 40%)',
           }}
         />
         <div className="container-x relative grid gap-12 py-20 lg:grid-cols-2 lg:py-28">

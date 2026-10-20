@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const links = [
   { href: '/about', label: 'About' },
@@ -10,15 +11,23 @@ const links = [
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div className="container-x flex h-16 items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 font-display text-lg font-bold text-gold-300">
-            R
-          </span>
-          <span className="font-display text-lg font-semibold leading-tight text-brand-900">
-            Rolins Montessori
-            <span className="block text-xs font-sans font-normal uppercase tracking-wider text-slate-500">
-              Academy LTD
+      <div className="container-x flex h-20 items-center justify-between gap-4">
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/logo.png"
+            alt="Rolins Montessori Academy crest"
+            width={52}
+            height={52}
+            priority
+            className="h-13 w-13 rounded-xl object-contain"
+            style={{ width: 52, height: 52 }}
+          />
+          <span className="leading-tight">
+            <span className="block font-display text-lg font-semibold text-brand-900">
+              Rolins Montessori Academy
+            </span>
+            <span className="block text-[11px] font-semibold uppercase tracking-[0.18em] text-crimson-500">
+              Limitless Opportunities
             </span>
           </span>
         </Link>

@@ -1,19 +1,25 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Footer() {
   return (
     <footer className="bg-brand-900 text-brand-100">
       <div className="container-x grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2.5">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 font-display text-lg font-bold text-gold-300">
-              R
-            </span>
+          <div className="flex items-center gap-3">
+            <Image
+              src="/logo.png"
+              alt="Rolins Montessori Academy crest"
+              width={48}
+              height={48}
+              className="h-12 w-12 rounded-lg bg-white/90 object-contain p-1"
+            />
             <span className="font-display text-lg font-semibold">Rolins Montessori Academy</span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-200/80">
             Nurturing curious minds in Alakahia, Port Harcourt since 2009.
           </p>
+          <p className="mt-3 font-display text-sm italic text-gold-300">Limitless Opportunities</p>
         </div>
 
         <div>
