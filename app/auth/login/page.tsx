@@ -96,6 +96,12 @@ export default function Login() {
               </button>
             </div>
 
+            <p className="mt-6 text-center text-sm">
+              <a href="/auth/forgot" className="font-semibold text-brand-700 hover:text-brand-500">
+                Forgot your password?
+              </a>
+            </p>
+
             {msg && (
               <p
                 className={`rounded-xl px-4 py-3 text-sm ${
