@@ -37,7 +37,8 @@ export default function ReportGenerator() {
         .eq('teacher_id', user.user.id);
       const seen = new Map<string, ClassRow>();
       for (const s of subjects ?? []) {
-        const c = (s as { classes: ClassRow }).classes;
+        const joined = (s as unknown as { classes: ClassRow | ClassRow[] | null }).classes;
+        const c = Array.isArray(joined) ? joined[0] : joined;
         if (c && !seen.has(c.id)) seen.set(c.id, c);
       }
       const list = Array.from(seen.values());
